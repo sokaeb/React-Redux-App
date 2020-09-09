@@ -3,7 +3,7 @@ import React from 'react';
 const Character = (props) => {
     const { character } = props;
     return(
-    <>
+    <div className='charactersContainer'>
         <div className="characters">
             <img src={character.image} alt='' />
             <div className="characterDetails">
@@ -14,7 +14,7 @@ const Character = (props) => {
             <p>Origin: {character.origin.name}</p>
             </div>
         </div>
-    </>
+    </div>
     )
 }
 
