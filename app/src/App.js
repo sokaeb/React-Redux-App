@@ -1,17 +1,34 @@
 import React, { useEffect } from 'react';
-import Character from './components/Character';
+import CharacterList from './components/CharacterList';
+import { connect } from 'react-redux';
+import { fetchCharacters } from './actions';
 
 import './App.css';
 
-function App() {
+function App(props) {
+  const { fetchCharacters, loadingCharacters, errorMessage} = props;
+
+  useEffect(() => {
+    fetchCharacters();
+  }, [fetchCharacters]);
+
   return (
     <div className="App">
       <header className="App-header">
-      </header>
       <h1>Rick and Morty Characters</h1>
-      <Characters />
+      </header>
+    {!loadingCharacters ? ( <CharacterList /> ) : (
+      <div>...Finding your character</div>)}
+   {errorMessage !== "" ? <div>{errorMessage}</div> : null}
     </div>
   );
 }
 
-export default App;
+function mapStateToProps(state) {
+  return {
+    loadingCharacters: state.loadingCharacters,
+    errorMessage: state.errorMessage,
+  };
+}
+
+export default connect(mapStateToProps, { fetchCharacters})(App);

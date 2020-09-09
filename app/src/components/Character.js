@@ -1,19 +1,21 @@
 import React from 'react';
-import { connect } from 'react-redux';
 
-function Character(props){
+const Character = (props) => {
+    const { character } = props;
     return(
-        <>
-        
-        </>
+    <>
+        <div className="characters">
+            <img src={character.image} alt='' />
+            <div className="characterDetails">
+            <h2>{character.name}</h2>
+            <p>Status: {character.status}</p>
+            <p>Species: {character.species}</p>
+            <p>Gender: {character.gender}</p>
+            <p>Origin: {character.origin.name}</p>
+            </div>
+        </div>
+    </>
     )
 }
 
-
-function mapStateToProps(state) {
-    return {
-
-    }
-}
-
-export default connect(mapStateToProps, {})(Character);
+export default Character;

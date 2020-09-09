@@ -10,7 +10,7 @@ export const fetchCharacters = () => {
         axios
             .get('https://rickandmortyapi.com/api/character')
             .then(res => {
-                console.log(res)
+                dispatch({ type: FETCH_CHARACTERS_SUCCESS, payload: res.data.results});
             })
             .catch(err => {
                 dispatch({

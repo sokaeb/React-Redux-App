@@ -7,17 +7,28 @@ import {
 const initialState = {
     characters: [],
     loadingCharacters: false,
-    errorMessage: ''
+    errorMessage: "",
 };
 
 export default (state = initialState, action) => { 
 switch(action.type){
     case FETCH_CHARACTERS: 
-        return {};
-    case FETCH_CHARACTERS_SUCCESS:
-        return {};
+        return {
+            ...state,
+            loadingCharacters: true
+        };
     case FETCH_CHARACTERS_ERROR:
-        return{};
+        return {
+            ...state,
+            loadingCharacters: false,
+            errorMessage: ""
+        };
+    case FETCH_CHARACTERS_SUCCESS:
+        return{
+            ...state,
+            characters: action.payload,
+            loadingCharacters: false
+        };
     default:
     return state;
 };
