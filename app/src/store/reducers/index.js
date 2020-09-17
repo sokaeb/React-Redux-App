@@ -21,7 +21,7 @@ switch(action.type){
         return {
             ...state,
             loadingCharacters: false,
-            errorMessage: ""
+            errorMessage: action.payload
         };
     case FETCH_CHARACTERS_SUCCESS:
         return{
