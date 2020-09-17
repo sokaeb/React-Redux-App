@@ -36,6 +36,19 @@ img:hover{
   opacity: 60%;
 }
 
+h1 {
+  font-family: 'Creepster', cursive;
+  font-size: 2rem;
+  color: black;
+}
+
+.span {
+  font-family: 'Creepster', cursive;
+  font-size: 1.5rem;
+  color: black;
+
+}
+
 h2 {
   font-family: 'Creepster', cursive;
   font-size: 1.5rem;
@@ -94,12 +107,16 @@ p {
 }
 
 .pageNumber {
-  background-color: rgb(163, 7, 140);
+  background-color: rgba(163, 7, 140, 0.8);
   color: white;
   border: none;
   border-radius: 5%;
   width: 100%;
   padding: 10%;
+}
+
+.pageNumber:hover {
+  background-color: rgb(163, 7, 140);
 }
 
 .showAndHide:hover {

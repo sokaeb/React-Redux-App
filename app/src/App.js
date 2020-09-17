@@ -16,7 +16,7 @@ function App(props) {
   return (
     <div className="App">
       <header className="App-header">
-      <h1>Rick and Morty Characters</h1>
+      <h1>Rick <span className="span">and</span> Morty Characters</h1>
       </header>
 
 <div className="pageNumbers">
