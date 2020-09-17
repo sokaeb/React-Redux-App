@@ -1,61 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Grandstander&display=swap');
 
-.App {
+/* GENERAL STYLES */
+* {
   text-align: center;
+  box-sizing: border-box;
+}
+
+.App {
   background-image: url(https://cdn.guidingtech.com/imager/assets/2020/01/251217/Best-Rick-and-Morty-wallpapers-for-desktop-4k-2_4d470f76dc99e18ad75087b1b8410ea9.jpg?1578464144);
   background-repeat:no-repeat;
   background-size:cover;
   background-position:center;
   background-attachment:fixed;
-
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 
 .App-header {
-  background-color: #cdaf09c0;
-  min-height: 20vh;
+  background-color: rgba(169, 89, 157, 0.9);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: black;
-  margin-bottom: 5%;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  margin-bottom: 2%;
 }
 
 img {
   border: 3px solid rgb(0, 0, 0);
   border-radius: 50%;
   width: 60%;
-  opacity: 60%;
+  opacity: 100%;
 }
 
 img:hover{
-  opacity: 100%;
+  opacity: 60%;
 }
 
 h2 {
@@ -66,16 +44,15 @@ h2 {
 
 p {
   font-family: 'Grandstander', cursive;
-  font-size: 1rem;
   color: black;
 }
 
+/* CHARACTER CARD STYLES */
+
 .charactersContainer{
-  /* border: 1px solid red; */
-  background-color: #cdaf09c0;
+  background-color: rgba(169, 89, 157, 0.9);
   border-radius: 5%;
-  margin: auto;
-  width: 25%;
+  width: 26%;
   margin-bottom: 2%;
   padding: 2%;
 }
@@ -83,4 +60,48 @@ p {
 .characterBox {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.Alive{
+  color: rgb(125, 247, 11);
+  text-transform: uppercase;
+}
+
+.Dead {
+  color: rgb(203, 6, 6);
+  text-decoration: line-through;
+}
+
+.unknown {
+  color: rgb(153, 162, 172);
+}
+
+/* PAGE NUMBER STYLES */
+
+.pageNumbers {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  margin: auto;
+  margin-bottom: 3%;
+  padding: 1%;
+}
+
+.numberDiv {
+  width: 100%;
+  margin: 0 2%;
+}
+
+.pageNumber {
+  background-color: rgb(163, 7, 140);
+  color: white;
+  border: none;
+  border-radius: 5%;
+  width: 100%;
+  padding: 10%;
+}
+
+.showAndHide:hover {
+  color: rgb(153, 162, 172);
 }

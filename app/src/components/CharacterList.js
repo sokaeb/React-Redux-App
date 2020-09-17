@@ -14,7 +14,7 @@ function CharacterList(props) {
 
 function mapStateToProps(state) {
   return {
-    characters : state.characters
+    characters : state.characters,
   };
 }
 
