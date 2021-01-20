@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import CharacterList from './components/CharacterList';
 import { connect } from 'react-redux';
 import { fetchCharacters } from './store/actions';
-import RingLoader from 'react-spinners/RingLoader'; 
+import ScaleLoader from 'react-spinners/ScaleLoader'; 
 import './App.css';
 
 function App(props) {
@@ -72,7 +72,7 @@ function App(props) {
       <div className="loadingDiv">
           {!loadingCharacters ? ( <CharacterList /> ) : (
           <div className="loading">
-          <RingLoader className="ringLoader" /> Looking for your character...</div>
+          <ScaleLoader className="scaleLoader" /> Looking for your character...</div>
           )}
       </div>
 
@@ -85,7 +85,7 @@ function mapStateToProps(state) {
   return {
     loadingCharacters: state.loadingCharacters,
     errorMessage: state.errorMessage,
-    page: state.page,
+    // page: state.page,
   };
 }
 

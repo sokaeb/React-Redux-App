@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Grandstander&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Creepster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Grandstander&display=swap");
 
 /* GENERAL STYLES */
 * {
@@ -9,10 +9,10 @@
 
 .App {
   background-image: url(https://cdn.guidingtech.com/imager/assets/2020/01/251217/Best-Rick-and-Morty-wallpapers-for-desktop-4k-2_4d470f76dc99e18ad75087b1b8410ea9.jpg?1578464144);
-  background-repeat:no-repeat;
-  background-size:cover;
-  background-position:center;
-  background-attachment:fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .App-header {
@@ -32,37 +32,36 @@ img {
   opacity: 100%;
 }
 
-img:hover{
+img:hover {
   opacity: 60%;
 }
 
 h1 {
-  font-family: 'Creepster', cursive;
+  font-family: "Creepster", cursive;
   font-size: 2rem;
   color: black;
 }
 
 .span {
-  font-family: 'Creepster', cursive;
+  font-family: "Creepster", cursive;
   font-size: 1.5rem;
   color: black;
-
 }
 
 h2 {
-  font-family: 'Creepster', cursive;
+  font-family: "Creepster", cursive;
   font-size: 1.5rem;
   color: black;
 }
 
 p {
-  font-family: 'Grandstander', cursive;
+  font-family: "Grandstander", cursive;
   color: black;
 }
 
 /* CHARACTER CARD STYLES */
 
-.charactersContainer{
+.charactersContainer {
   background-color: rgba(169, 89, 157, 0.9);
   border-radius: 5%;
   width: 26%;
@@ -76,7 +75,7 @@ p {
   justify-content: space-around;
 }
 
-.Alive{
+.Alive {
   color: rgb(125, 247, 11);
   text-transform: uppercase;
 }
@@ -121,4 +120,9 @@ p {
 
 .showAndHide:hover {
   color: rgb(153, 162, 172);
+}
+
+.loading {
+  font-size: 30px;
+  color: orangered;
 }
